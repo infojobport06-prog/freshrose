@@ -175,20 +175,6 @@ footer {
   display: block;
   margin: 20px auto;
 }
-/* Banner */
-.banner {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.banner-img {
-  max-width: 800px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
-}
-
 /* Social Links */
 .social-links {
   margin-top: 15px;
@@ -232,5 +218,33 @@ footer {
   font-weight: bold;
   color: #ff4d6d; /* Red highlight for visibility */
   font-size: 1.1rem;
+}
+/* Banner Section */
+.banner {
+  position: relative;
+  text-align: center;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Red Ribbon Text */
+.ribbon {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c8102e; /* Red ribbon color */
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  white-space: nowrap;
 }
 
