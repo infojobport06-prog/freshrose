@@ -231,20 +231,58 @@ footer {
   display: block;
 }
 
-/* Red Ribbon Text */
+/* ===== Banner Section ===== */
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.banner-img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ===== Realistic Ribbon ===== */
 .ribbon {
   position: absolute;
-  top: 20px;
+  top: 0; /* flush with top of banner */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #c8102e; /* Red ribbon color */
+  background: linear-gradient(90deg, #b30000, #d90429);
   color: #fff;
-  font-size: 1.4em;
-  font-weight: bold;
-  padding: 10px 30px;
-  border-radius: 5px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 14px 40px;
+  line-height: 1;
+  border-radius: 0;
+  text-align: center;
   z-index: 2;
-  white-space: nowrap;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
 }
+
+/* Ribbon folds */
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 100%;
+  background: #7a0000;
+  z-index: -1;
+}
+
+.ribbon::before {
+  left: -25px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.ribbon::after {
+  right: -25px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
 
