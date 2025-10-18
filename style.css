@@ -12,6 +12,7 @@ body {
   color: #333;
 }
 
+/* ===== Header ===== */
 header {
   background: #2c5f2d;
   color: #fff;
@@ -43,6 +44,7 @@ nav ul li a:hover {
   color: #ff4d6d;
 }
 
+/* ===== Hero Section ===== */
 .hero {
   background: url("images/hero-placeholder.jpg") no-repeat center center/cover;
   color: #080808;
@@ -60,11 +62,13 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
+/* ===== Sections ===== */
 section {
   padding: 40px 20px;
   text-align: center;
 }
 
+/* ===== Team Section ===== */
 .team-members {
   display: flex;
   justify-content: center;
@@ -79,6 +83,7 @@ section {
   object-fit: cover;
 }
 
+/* ===== Projects Section ===== */
 .projects .project {
   margin: 20px auto;
   max-width: 600px;
@@ -89,6 +94,7 @@ section {
   border-radius: 10px;
 }
 
+/* ===== Gallery ===== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -100,6 +106,7 @@ section {
   border-radius: 10px;
 }
 
+/* ===== Contact ===== */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -123,6 +130,7 @@ section {
   cursor: pointer;
 }
 
+/* ===== Footer ===== */
 footer {
   background: #2c5f2d;
   color: #fff;
@@ -130,6 +138,8 @@ footer {
   padding: 15px;
   margin-top: 30px;
 }
+
+/* ===== Logo Gradient ===== */
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
@@ -138,6 +148,8 @@ footer {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ===== Objectives / Values ===== */
 .objectives-values {
   background: #fff;
   padding: 40px 20px;
@@ -164,18 +176,21 @@ footer {
   margin-top: 10px;
   line-height: 1.8;
 }
+
+/* ===== Certificate Image ===== */
 .certificate img,
 .certificate-img {
-  max-width: 600px;  /* adjust size */
-  width: 100%;       /* responsive */
-  height: auto;      /* keeps aspect ratio */
+  max-width: 600px;
+  width: 100%;
+  height: auto;
   border: 2px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: block;
   margin: 20px auto;
 }
-/* Social Links */
+
+/* ===== Social Links ===== */
 .social-links {
   margin-top: 15px;
 }
@@ -188,8 +203,10 @@ footer {
 }
 
 .social-links a:hover {
-  color: #f9d71c; /* Yellow highlight on hover */
+  color: #f9d71c;
 }
+
+/* ===== Registration Section ===== */
 .registration {
   background: #fff;
   text-align: center;
@@ -216,39 +233,28 @@ footer {
 
 .registration .reg-number {
   font-weight: bold;
-  color: #ff4d6d; /* Red highlight for visibility */
+  color: #ff4d6d;
   font-size: 1.1rem;
-}
-/* Banner Section */
-.banner {
-  position: relative;
-  text-align: center;
-}
-
-.banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* ===== Banner Section ===== */
 .banner {
   position: relative;
-  width: 100%;
-  overflow: hidden;
   text-align: center;
+  overflow: hidden;
 }
 
 .banner-img {
   width: 100%;
-  display: block;
   height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-/* ===== Realistic Ribbon ===== */
+/* ===== Ribbon ===== */
 .ribbon {
   position: absolute;
-  top: 0; /* flush with top of banner */
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(90deg, #b30000, #d90429);
@@ -263,7 +269,6 @@ footer {
   box-shadow: 0 3px 6px rgba(0,0,0,0.4);
 }
 
-/* Ribbon folds */
 .ribbon::before,
 .ribbon::after {
   content: "";
@@ -285,4 +290,37 @@ footer {
   clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
+/* ===== Responsive Adjustments ===== */
 
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .banner-img {
+    max-height: 255vh; /* reduce height on desktop */
+  }
+
+  .intro,
+  .registration {
+    width: 75%;
+    margin: 40px auto;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 20px;
+  }
+
+  .banner-img {
+    max-height: 85vh;
+  }
+
+  .ribbon {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
