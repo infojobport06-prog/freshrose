@@ -6,7 +6,6 @@
   <title>Fresh Roses Initiative - Contact</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 <body>
   <header>
@@ -24,14 +23,22 @@
 
   <section class="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+
+    <!-- ✅ Working Netlify Contact Form -->
+    <form name="contact" method="POST" data-netlify="true" action="success.html">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <p>Email:freshrosesinitiative@yahoo.com</p>
-    <p>Facebook: <a href="https://web.facebook.com/freshroses.initiatives.empowerment">freshrosesinitiative empowerment</a></p>
+
+    <p>Email: <a href="mailto:freshrosesinitiative@yahoo.com">freshrosesinitiative@yahoo.com</a></p>
+    <p>Facebook: 
+      <a href="https://web.facebook.com/freshroses.initiatives.empowerment" target="_blank">
+        Freshrosesinitiative Empowerment
+      </a>
+    </p>
   </section>
 
   <footer>
